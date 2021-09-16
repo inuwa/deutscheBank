@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+	<mat-label>{{ label }}</mat-label>
+	<mat-select (selectionChange)="$$selectionChange(matSelect.value)" #matSelect>
+			<mat-option *ngFor="let option of options$ | async" [value]="option.value">
+				{{ option.key }}
+			</mat-option>
+	</mat-select>
+</mat-form-field>

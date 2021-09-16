@@ -1,15 +1,4 @@
 <div class="container">
-	<h1><b>GET REGION DETAILS</b></h1>
-<region label="Select Region" [options]="regions$" (selected)="$$getCountries($event)" class="me-3"></region>
-<ng-container *ngIf="showCountries">
-	<region label="Select Country" [options]="countries$" (selected)="$$displayCountries($event)"></region>
-</ng-container>
-
-<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-  <h3>ERROR</h3>
-  <p>{{errorMessage}}</p>
-</div>
-
 	<table class="table table-success table-striped">
 		<thead>
 		<tr>
@@ -33,7 +22,6 @@
 					</td>
 				<td><img [src]="detail.flag" class="flag"/></td>
 			</ng-container>
-			
 		</tr>
 	</tbody>
 	</table>
