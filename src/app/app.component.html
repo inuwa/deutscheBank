@@ -9,32 +9,5 @@
   <h3>ERROR</h3>
   <p>{{errorMessage}}</p>
 </div>
-
-	<table class="table table-success table-striped">
-		<thead>
-		<tr>
-			<th scope="col">Name</th>
-			<th scope="col">Capital</th>
-			<th scope="col">Population</th>
-			<th scope="col">Currencies</th>
-			<th scope="col">Flag</th>
-		</tr>
-  		</thead>
-  	<tbody>
-		<tr>
-			<ng-container *ngIf="detail$ | async as detail">
-				<td>{{ detail.name }}</td>
-				<td>{{ detail.capital }}</td>
-				<td>{{ detail.population }}</td>
-				<td>
-					<span *ngFor="let currency of detail.currencies;let index; let last;" class="me-3">
-						{{ currency.code}} {{(last) ? '':'|'}}
-					</span>
-					</td>
-				<td><img [src]="detail.flag" class="flag"/></td>
-			</ng-container>
-			
-		</tr>
-	</tbody>
-	</table>
+	<country-details [details]="detail$"></country-details>
 </div>

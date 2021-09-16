@@ -8,6 +8,6 @@ import { Observable } from 'rxjs';
 	styleUrls: ['./country-details.component.scss']
 })
 export class CountryDetailsComponent {
-	@Input() detail$: Observable<Country> = new Observable();
+	@Input('details') detail$: Observable<Country> = new Observable();
 	constructor() { }
 }
